@@ -1,0 +1,16 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.headerCenter {
+  display: flex;
+  flex-direction: row;
+}
+.headerLast {
+  display: flex;
+}
