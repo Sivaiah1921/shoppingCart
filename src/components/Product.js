@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { actFetchProductsRequest, AddCart } from "../actions";
 import { connect } from "react-redux";
+import { NavLink } from "react-router-dom";
+import heart from "../Assets/heart.svg";
 export class Product extends Component {
   componentDidMount() {
     this.props.actFetchProductsRequest();
@@ -8,6 +10,7 @@ export class Product extends Component {
 
   render() {
     const { _products } = this.props._products;
+    console.log(_products);
     if (_products.length > 0) {
       return (
         <div className="row" style={{ marginTop: "10px" }}>
@@ -19,20 +22,18 @@ export class Product extends Component {
                   className="col-md-2"
                   style={{ marginBottom: "10px" }}
                 >
-                  <img
-                    src={item.image}
-                    className="img-resposive"
-                    style={{ width: "100%", height: "100px" }}
-                  />
+                  <NavLink to={`/product/${item.id}`}>
+                    <img
+                      src={item.image}
+                      alt="img"
+                      className="img-resposive"
+                      style={{ width: "100%", height: "100px" }}
+                    />
+                  </NavLink>
+
                   <h5>{item.title}</h5>
                   <h5> ${item.price}</h5>
-                  <span
-                    className="badge badge-primary"
-                    style={{ cursor: "pointer" }}
-                    onClick={() => this.props.AddCart(item)}
-                  >
-                    +
-                  </span>
+                  <img src={heart} alt="img" />
                 </div>
               ))}
             </div>

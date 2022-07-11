@@ -29,7 +29,10 @@ export function GetNumberCart() {
   };
 }
 
-export function AddCart(payload) {
+export function AddCart(data, quantity) {
+  const payload = { ...data, quantity };
+  console.log(payload, "numberCart");
+
   return {
     type: "ADD_CART",
     payload
