@@ -4,6 +4,8 @@ import Cart from "./components/Cart";
 import CartDetails from "./components/CartDetails";
 import Header from "./components/Header";
 import Product from "./components/Product";
+import Footer from "./components/Footer";
+
 function App() {
   return (
     <Router>
@@ -14,6 +16,7 @@ function App() {
           <Route path="/carts" exact component={Cart} />
           <Route path="/product/:id" exact component={CartDetails} />
         </Switch>
+        <Footer />
       </div>
     </Router>
   );

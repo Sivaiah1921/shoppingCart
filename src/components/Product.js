@@ -3,6 +3,9 @@ import { actFetchProductsRequest, AddCart } from "../actions";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
 import heart from "../Assets/heart.svg";
+import './Product.scss'
+
+
 export class Product extends Component {
   componentDidMount() {
     this.props.actFetchProductsRequest();
@@ -15,6 +18,51 @@ export class Product extends Component {
       return (
         <div className="row" style={{ marginTop: "10px" }}>
           <div className="col-md-12">
+            <div className="product">Women
+            <div>Men</div>
+            </div>
+            <div className="product__children">
+              <div>Clothing /</div>
+              <div>Women`s /</div>
+              <div>Outerwear</div>
+              <div>38 Results</div>
+              <div>Sort by Latest</div>
+                      </div>
+
+            <div className="sidebar">
+               <div className="sidebar__filter">Filters</div>
+               <div className="sidebar__attribute1">Attribute</div>
+               
+               <div>Option</div>
+               <div>Option</div>
+               <div>Option</div>
+               <div>Option</div>
+           <div className="sidebar__showmore">Show more</div>
+             
+           <div className="sidebar__attribute2">Attribute</div>
+
+           <div>Option</div>
+           <div>Option</div>
+           <div>Option</div>
+           <div>Option</div>
+           <div>Option</div>
+           <div>Option</div>
+
+           <div className="sidebar__attribute3">Attribute</div>
+
+           <div>Option</div>
+           <div>Option</div>
+           <div>Option</div>
+           <div>Option</div>
+           <div>Option</div>
+           <div>Option</div>
+           <div>Option</div>
+           <div>Option</div>
+
+            </div>
+            
+           
+
             <div className="row">
               {_products.map((item, index) => (
                 <div

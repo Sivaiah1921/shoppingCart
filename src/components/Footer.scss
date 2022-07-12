@@ -1,0 +1,18 @@
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    // width: 1393px;
+    // height: 139px;
+    // opacity: 1;
+
+  &__first {
+  color: white;
+  } 
+  
+  &__fifth{
+     display: flex;
+     flex-direction: column;
+  }
+
+}

@@ -1,4 +1,4 @@
-.App {
+/* .App {
   font-family: sans-serif;
   text-align: center;
 }
@@ -6,8 +6,36 @@
 .header {
   display: flex;
   justify-content: space-between;
+} 
+ .headerStart {
+  font-weight: 600;
+  font-size: 20px;
+} 
+
+
+ .headerCenter {
+  display: flex;
+  width: 20rem;
+  justify-content: space-around;
 }
-.headerStart {
+.headerLast {
+  display: flex;
+  width: 14rem;
+  justify-content: space-around;
+  align-items: center;
+}  */
+
+
+/* .App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+} */
+/* .headerStart {
   font-weight: 600;
   font-size: 20px;
 }
@@ -21,4 +49,5 @@
   width: 14rem;
   justify-content: space-around;
   align-items: center;
-}
+} */
+

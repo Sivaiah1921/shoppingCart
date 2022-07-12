@@ -1,0 +1,39 @@
+
+.header {
+    display: flex;
+    justify-content: space-between;
+
+ &__Start {
+    font-weight: 600;
+    font-size: 20px;
+    
+  }
+
+  &__Center {
+    display: flex;
+    width: 20rem;
+    justify-content: space-around;
+     
+    }
+
+  &__Last {
+    display: flex;
+    width: 14rem;
+    justify-content: space-around;
+    align-items: center;
+    
+    &__search {
+      display: flex;
+      width: 5rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__user {
+      display: flex;
+    width: 4.5rem;
+    justify-content: space-between;
+    align-items: center;
+    }
+  }
+  }
+

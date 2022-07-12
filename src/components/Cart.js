@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { IncreaseQuantity, DecreaseQuantity, DeleteCart } from "../actions";
 
-function Cart({ items, IncreaseQuantity, DecreaseQuantity, DeleteCart }) {
+export const  Cart = ({ items, IncreaseQuantity, DecreaseQuantity, DeleteCart }) => {
   //  console.log(items)
   let ListCart = [];
   let TotalCart = 0;

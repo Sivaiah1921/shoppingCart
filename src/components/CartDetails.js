@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { AddCart } from "../actions";
+// import './CartDetails.scss'
+
 
 const CartDetails = () => {
   const [data, setData] = useState();
@@ -24,7 +26,7 @@ const CartDetails = () => {
         src={data?.image}
         alt="img"
         className="img-resposive"
-        style={{ width: "100%", height: "100px" }}
+        // style={{ width: "50%", height: "500px" }}
       />
       <h5>{data?.title}</h5>
       <h5> ${data?.price}</h5>
