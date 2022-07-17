@@ -86,7 +86,16 @@
       background-color: red;
     }
     &__companyAddsm {
-      background-color: red;
+      display: flex;
+      flex-direction: column;
+      font-weight: 400;
+      // background-color: red;
+    }
+
+    &__companyAddsm1 {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 8px;
     }
     &__top{
       display: flex;
@@ -137,6 +146,7 @@
     }
 
     &__bottomSection {
+      gap: 35px;
       font-weight: 500;
     }
 

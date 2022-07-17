@@ -44,7 +44,7 @@ const Footer = () => {
         <div className='footer__bottomText'><span className='footer__bottomSpan'>V</span>ENIA</div>
         <p className='footer__companyAdd'>@Comapany name Address Ave,City Name,State ZIP</p>
         <div className='footer__companyAddsm'>
-          <div>@Comapany name </div>
+          <div className='footer__companyAddsm1'>@Comapany Name </div>
           <div>Address Ave,City Name,State ZIP</div>
         </div>
         <div className='footer__bottomSection'>

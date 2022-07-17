@@ -60,7 +60,7 @@ export class Header extends Component {
         </div>
         <div className="headerSm">
           <img className='headerSm__start' src={menu} alt="menu" onClick={this.handleOpen} />
-          <div><span className='headerSm__middle'>V</span>ENIA</div>
+          <div className='headerSm__text'><span className='headerSm__middle'>V</span>ENIA</div>
           <div className='headerSm__last'>
             <img src={Search} alt="search" />
             <Link to="/carts">

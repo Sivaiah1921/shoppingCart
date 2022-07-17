@@ -49,29 +49,30 @@ export class Product extends Component {
           <div className="product__list__filters">
             <div>
               < img src={sliders} alt="sliders" />
-              <span>Filter Results</span>
+              <span className="product__list__span">Filter Results</span>
             </div>
 
             <div>
               <div><img src={arrowup} alt="arrow-up" />
-                <img src={arrowdown} alt="arrow-down" /></div>
-              <span> Sort Products</span>
+                <img src={arrowdown} alt="arrow-down" />
+                <span className="product__list__span1"> Sort Products</span></div>
+
             </div>
 
 
           </div>
 
           <div className="product__listrightsm">
-            <div className="product_listrightsm1">Filters</div>
-            <div>38 Results</div>
+            <div className="product__listrightsm1">Filters</div>
+            <div  className="product__listrightsm2">38 Results</div>
           </div>
 
 
           <div className="product__main">
 
             <div className="product__sidebar">
-              <div className="sidebar__filter">Filters</div>
-              <div className="sidebar__attribute1">Attribute</div>
+              <div className="product__sidebar__filter">Filters</div>
+              <div className="product__sidebar__attribute1">Attribute</div>
 
               {/* <div className="sidebar__checkbox">       */}
               <div style={{ display: 'flex', gap: "10px" }}><input type='checkbox' /> Option</div>
@@ -80,9 +81,9 @@ export class Product extends Component {
               <div style={{ display: 'flex', gap: "10px" }} ><input type='checkbox' /> Option</div>
               <div style={{ display: 'flex', gap: "10px" }}><input type='checkbox' /> Option</div>
 
-              <div className="sidebar__showmore">Show more</div>
+              <div className="product__sidebar__showmore">Show more</div>
 
-              <div className="sidebar__attribute2">Attribute</div>
+              <div className="product__sidebar__attribute2">Attribute</div>
               <div><input type='checkbox' /> Option</div>
               <div><input type='checkbox' /> Option</div>
               <div><input type='checkbox' /> Option</div>
@@ -90,7 +91,7 @@ export class Product extends Component {
               <div><input type='checkbox' /> Option</div>
               <div><input type='checkbox' /> Option</div>
 
-              <div className="sidebar__attribute3">Attribute</div>
+              <div className="product__sidebar__attribute3">Attribute</div>
 
               <div><input type='checkbox' /> Option</div>
               <div><input type='checkbox' /> Option</div>

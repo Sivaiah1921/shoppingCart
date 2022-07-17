@@ -81,7 +81,16 @@
       display: flex;
       gap: 20px;
     }
+    
+    &__middle {
+    color: lightblue;
+    }
+    &__text {
+      letter-spacing: 5px;
+    }
   }
+
+ 
   .headerSmSidebar {
     position: absolute;
     z-index: 1000;

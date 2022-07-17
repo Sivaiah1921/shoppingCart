@@ -41,6 +41,12 @@
       display: none;
    }
 
+   &____listrightsm2 {
+      display: flex;
+      justify-content: center;
+      background-color: red;
+   }
+
    &__list {
       display: flex;
       // justify-content: space-between;
@@ -49,6 +55,10 @@
       padding: 0.6rem;
       margin: 1.5rem 0;
 
+   }
+
+   &__list__filters {
+      display: none;
    }
 
    &__listItem {
@@ -104,8 +114,10 @@
 
       &__filter {
          padding: 5px;
+         margin-bottom: 5px;
+      
          border: 2px solid #D1D3D6;
-         // border-width: 0px;
+        
 
          border-top: 0px;
          border-left: 0px;
@@ -117,16 +129,14 @@
 
       &__attribute1 {
          padding-top: 10px;
-         padding-bottom: 4px;
-
-
-         font-weight: 500;
+         margin-bottom: 5px;
+         font-weight: 400;
 
       }
 
       &__showmore {
          padding-top: 10px;
-         padding-bottom: 1.3rem;
+         // padding-bottom: 1.3rem;
          border: 2px solid #D1D3D6;
          border-top: 0px;
          border-left: 0px;
@@ -197,10 +207,20 @@
       &__list__filters {
          display: flex;
          justify-content: center;
-         justify-content: space-evenly;
+         justify-content: space-around;
          // gap: 5px;
          font-weight: 620;
          text-decoration: underline;
+      }
+
+      &__list__span {
+         margin-left: 6px;      
+       
+      }
+
+      &__list__span1 {
+         margin-left: 6px;      
+       
       }
       &__listrightsm {
          display: flex;
