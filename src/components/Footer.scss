@@ -73,10 +73,21 @@
       text-decoration: underline;
     }
   }
+  &__companyAddsm{
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 720px) {
   .footer{
+
+    &__companyAdd {
+      display: none;
+      background-color: red;
+    }
+    &__companyAddsm {
+      background-color: red;
+    }
     &__top{
       display: flex;
       flex-direction: column;
@@ -85,5 +96,49 @@
       border-top: 2px solid gray;
       border-bottom: 2px solid gray;
     }
+
+    &__first {
+      margin-top: 5px;
+      font-weight: 250;
+  
+    }
+
+    &__second {
+      margin-top: 15px;
+      font-weight: 250;
+  
+    }
+
+    &__third {
+      margin-top: 15px;
+      font-weight: 250;
+  
+    }
+
+    
+    &__fourth {
+      margin-top: 20px;
+      font-weight: 250;
+  
+    }
+
+    &__bottom {
+       display: flex;
+       flex-direction: column-reverse;
+       align-items: center;
+      //  padding: 5px;
+       gap: 15px;
+    }
+    &__bottomText {
+      display: none;
+    } 
+    &__bottomSpan {
+      display: none;
+    }
+
+    &__bottomSection {
+      font-weight: 500;
+    }
+
   }
 }

@@ -192,8 +192,29 @@
 
 
       }
+      
+
+      &__list__filters {
+         display: flex;
+         justify-content: center;
+         justify-content: space-evenly;
+         // gap: 5px;
+         font-weight: 620;
+         text-decoration: underline;
+      }
       &__listrightsm {
          display: flex;
+         justify-content: center;
+         font-weight: 500;
+         margin-top: 10px;
+         margin-bottom: 10px;
+      }
+
+      &_listrightsm1 {
+         display: none;
+      }
+      &__listItem{
+        margin: 50px;
       }
 
    }

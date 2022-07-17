@@ -10,9 +10,9 @@ const Footer = () => {
     <div className='footer'>
       <div className='footer__top'>
         <div className='footer__first'>
-          <Link to="/">Account</Link>
-          <Link to="/">Sign In</Link>
-          <Link to="/">Register</Link>
+          <div>Account</div>
+          <div>Sign In</div>
+          <div>Register</div>
           <div>Order Status</div>
         </div>
         <div className='footer__second'>
@@ -41,8 +41,12 @@ const Footer = () => {
       </div>
 
       <div className='footer__bottom'>
-        <div><span className='footer__bottomSpan'>V</span>ENIA</div>
-        <p>@Comapany ame Address Ave,City Name,State ZIP</p>
+        <div className='footer__bottomText'><span className='footer__bottomSpan'>V</span>ENIA</div>
+        <p className='footer__companyAdd'>@Comapany name Address Ave,City Name,State ZIP</p>
+        <div className='footer__companyAddsm'>
+          <div>@Comapany name </div>
+          <div>Address Ave,City Name,State ZIP</div>
+        </div>
         <div className='footer__bottomSection'>
         <div>Terms of Use</div>
         <div>Privacy Policy</div>
