@@ -13,61 +13,85 @@ export class Product extends Component {
 
   render() {
     const { _products } = this.props._products;
-    console.log(_products);
-    if (_products.length > 0) {
-      return (
-        <div className="row" style={{ marginTop: "10px" }}>
-          <div className="col-md-12">
-            <div className="product">Women
-            <div>Men</div>
+    console.log(_products, "_products");
+
+    return (
+      <div style={{ marginTop: "10px" }}>
+        <div className="product">
+          <div className="product__banner">
+            <div>
+              <div>Women's</div>
+              {/* <span ></span> */}
             </div>
-            <div className="product__children">
-              <div>Clothing /</div>
-              <div>Women`s /</div>
-              <div>Outerwear</div>
-              <div>38 Results</div>
-              <div>Sort by Latest</div>
-                      </div>
+            <div>AdobeStock</div>
+ 
 
-            <div className="sidebar">
-               <div className="sidebar__filter">Filters</div>
-               <div className="sidebar__attribute1">Attribute</div>
-               
-               <div>Option</div>
-               <div>Option</div>
-               <div>Option</div>
-               <div>Option</div>
-           <div className="sidebar__showmore">Show more</div>
-             
-           <div className="sidebar__attribute2">Attribute</div>
-
-           <div>Option</div>
-           <div>Option</div>
-           <div>Option</div>
-           <div>Option</div>
-           <div>Option</div>
-           <div>Option</div>
-
-           <div className="sidebar__attribute3">Attribute</div>
-
-           <div>Option</div>
-           <div>Option</div>
-           <div>Option</div>
-           <div>Option</div>
-           <div>Option</div>
-           <div>Option</div>
-           <div>Option</div>
-           <div>Option</div>
-
+        </div>
+        <div className="product__list">
+          <div>Clothing/Womens/Outerwear</div>
+          <div className="product__listright">
+            <div>38Results</div>
+            <div >
+              <select className="product__dropdown">
+                <option value="" >Sort by Latest</option>
+                <option value="" >men's clothing</option>
+                <option value="" >women's clothing</option>
+                <option value="" >jewelery</option>
+                <option value="" >electronics</option>
+              </select>
             </div>
-            
-           
+          </div>
+        </div>
+        <div className="product__listrightsm">
+            <div>Filters</div>
+            <div>38 Results</div>
+          </div>
 
-            <div className="row">
-              {_products.map((item, index) => (
+
+        <div className="product__main">
+
+          <div className="product__sidebar">
+            <div className="sidebar__filter">Filters</div>
+            <div className="sidebar__attribute1">Attribute</div>
+
+            {/* <div className="sidebar__checkbox">       */}
+            <div style={{ display: 'flex', gap: "10px" }}><input type='checkbox' /> Option</div>
+            <div style={{ display: 'flex', gap: "10px" }}><input type='checkbox' /> Option</div>
+            <div style={{ display: 'flex', gap: "10px" }}><input type='checkbox' /> Option</div>
+            <div style={{ display: 'flex', gap: "10px" }} ><input type='checkbox' /> Option</div>
+            <div style={{ display: 'flex', gap: "10px" }}><input type='checkbox' /> Option</div>
+
+            <div className="sidebar__showmore">Show more</div>
+
+            <div className="sidebar__attribute2">Attribute</div>
+            <div><input type='checkbox' /> Option</div>
+            <div><input type='checkbox' /> Option</div>
+            <div><input type='checkbox' /> Option</div>
+            <div><input type='checkbox' /> Option</div>
+            <div><input type='checkbox' /> Option</div>
+            <div><input type='checkbox' /> Option</div>
+
+            <div className="sidebar__attribute3">Attribute</div>
+
+            <div><input type='checkbox' /> Option</div>
+            <div><input type='checkbox' /> Option</div>
+            <div><input type='checkbox' /> Option</div>
+            <div><input type='checkbox' /> Option</div>
+            <div><input type='checkbox' /> Option</div>
+            <div><input type='checkbox' /> Option</div>
+            {/* </div> */}
+          </div>
+
+          <div className="product__listingItems">
+            {_products.length === 0 ? (
+              <div className="product__listingItems">
+                <h2>Loading...!</h2>
+              </div>
+            ) : (
+              _products.map((item, index) => (
                 <div
                   key={index}
-                  className="col-md-2"
+                  className="product__listItem"
                   style={{ marginBottom: "10px" }}
                 >
                   <NavLink to={`/product/${item.id}`}>
@@ -75,25 +99,25 @@ export class Product extends Component {
                       src={item.image}
                       alt="img"
                       className="img-resposive"
-                      style={{ width: "100%", height: "100px" }}
+                      style={{ width: "10rem", height: "13rem" }}
                     />
                   </NavLink>
+                  <div>
+                    <h5>{item.title.slice(0, 15)}</h5>
+                    <h5> ${item.price}</h5>
+                    <img src={heart} alt="img" />
+                  </div>
 
-                  <h5>{item.title}</h5>
-                  <h5> ${item.price}</h5>
-                  <img src={heart} alt="img" />
+
                 </div>
-              ))}
-            </div>
+              ))
+            )}
           </div>
         </div>
-      );
-    }
-    return (
-      <div className="row">
-        <h2>Loading...!</h2>
+        </div>
       </div>
     );
+
   }
 }
 

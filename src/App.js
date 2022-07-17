@@ -5,6 +5,7 @@ import CartDetails from "./components/CartDetails";
 import Header from "./components/Header";
 import Product from "./components/Product";
 import Footer from "./components/Footer";
+import './styles.scss'
 
 function App() {
   return (
@@ -12,9 +13,11 @@ function App() {
       <div className="container">
         <Header />
         <Switch>
-          <Route path="/" exact component={Product} />
-          <Route path="/carts" exact component={Cart} />
-          <Route path="/product/:id" exact component={CartDetails} />
+          <div className="container__wrapper">
+            <Route path="/" exact component={Product} />
+            <Route path="/carts" exact component={Cart} />
+            <Route path="/product/:id" exact component={CartDetails} />
+          </div>
         </Switch>
         <Footer />
       </div>

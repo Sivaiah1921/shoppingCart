@@ -51,3 +51,19 @@
   align-items: center;
 } */
 
+.container {
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .container, .container-sm {
+  max-width: 565px;
+  padding: 0;
+}
+
+}
+

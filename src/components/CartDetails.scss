@@ -1,4 +1,271 @@
-.img-resposive {
-    width: 50%;
-    height: 500px;
+.CartDetails {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  // &__underline {
+  //   // text-decoration: underline;
+  //   text-underline-offset: 10px;
+
+  // }
+
+  &__quantity {
+    :nth-child(1) {
+      font-weight: 600;
+    }
+
+    :nth-child(2) {
+      padding: 0.4rem;
+      display: flex;
+      justify-content: center;
+    }
   }
+
+  &__disable {
+    cursor: not-allowed;
+    width: 30px;
+    height: 30px;
+    border: 1px solid grey;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__span2 {
+    border-radius: 5px;
+    border: 1px solid grey;
+    width: 11rem;
+    margin: 0 5px;
+  }
+
+  &__span1 {
+    width: 30px;
+    height: 30px;
+    border: 1px solid grey;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__span3 {
+    width: 30px;
+    height: 30px;
+    border: 1px solid grey;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__cart {
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 5px;
+    width: 18rem;
+    height: 2rem;
+    margin-left: 6rem;
+    background-color: blue;
+    color: #D1D3D6;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 10px;
+  }
+
+  &__text__color {
+    display: flex;
+   
+
+  }
+
+  &__text__color1 {
+   
+    border: 2px solid blue;
+    background-color: #1F39FF;
+    // gap: 1rem;
+    margin-right: 2rem;
+    width: 90px;
+    height: 30px;
+    padding: 1.5rem;
+    border-radius: 5px;
+    
+  }
+
+  &__text__color2 {
+   
+    border: 2px solid #ff004c;
+    background-color: #ff004c;
+    margin-right: 2rem;
+    // width: 10px;
+    width: 90px;
+    height: 30px;
+    padding: 1.5rem;
+    border-radius: 5px;
+    
+  }
+
+  &__text__color3 {
+    border: 2px solid #ff7700;
+    background-color: #ff7700;
+    margin-right: 2.5rem;
+    width: 90px;
+    height: 30px;
+    padding: 1.5rem;
+    border-radius: 5px;
+   
+  }
+
+  &__text__color4 {
+    border: 2px solid grey;
+    background-color: gray;
+    width: 90px;
+    height: 30px;
+    padding-right: 10px;
+    padding: 1.5rem;
+    border-radius: 5px;
+
+  }
+
+  &__border {
+    display: flex;
+    border: 2px solid #D1D3D6;
+  }
+
+  &__text {
+    font-weight: 600;
+  }
+
+  &__rectaColor {
+    width: 50px;
+    display: flex;
+    // border: 1px solid grey;
+    // border: 2px;
+    border-radius: 15px;
+  }
+
+  &__size {
+    font-weight: 600;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+  }
+
+
+
+  &__rectangls {
+    // width: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+    padding-bottom: 30px;
+    // border: 1px solid grey;
+    // border: 2px;
+    // border-radius: 10px;
+  }
+
+  &__rectangls1 {
+
+    display: flex;
+
+    padding-left: 18px;
+    padding-top: 10px;
+    border: 2px solid #91959C;
+
+    width: 60px;
+    height: 50px;
+    border-radius: 10px;
+  }
+
+  &__rectangls2 {
+
+    display: flex;
+    border: 2px solid #91959C;
+    padding-left: 22px;
+    padding-top: 10px;
+    width: 60px;
+    height: 50px;
+    border-radius: 10px;
+  }
+
+  &__rectangls3 {
+
+    display: flex;
+    border: 2px solid #91959C;
+    padding-left: 18px;
+    padding-top: 10px;
+    width: 60px;
+    height: 50px;
+    border-radius: 10px;
+  }
+
+  &__rectangls4 {
+
+    display: flex;
+    padding-left: 22px;
+    padding-top: 10px;
+    width: 60px;
+    height: 50px;
+    border: 2px solid #91959C;
+    border-radius: 10px;
+  }
+
+  &__rectangls5 {
+    display: flex;
+    padding-left: 18px;
+    padding-top: 10px;
+    width: 60px;
+    height: 50px;
+
+    border: 2px solid #91959C;
+
+    border-radius: 10px;
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  &__save {
+     margin-right: 3rem;
+     margin-left: 0.3rem;
+  }
+
+  &__share {
+     margin-left: 0.3rem; 
+  }
+
+  &__itemName {
+      margin-left: 6.8rem;
+      margin-top: 2rem;
+      font-weight: 800;
+  }
+
+  &__description {
+     margin-left: 13rem;
+     margin-top: 1rem; 
+     margin-bottom: 0.5rem;
+     font-weight: 600;
+  }
+
+  &__details {
+     margin-left: 14.3rem;  
+     font-weight: 600; 
+  }
+
+  &__details__children {
+   
+    border: 1px solid #1F39FF;
+    width: 110px;
+    height: 10px;
+    margin-left: 12.2rem;
+    margin-bottom: 5px;
+    background-color: #1F39FF;
+  }
+}
