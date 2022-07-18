@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/shoppingCart/static/css/main.27f54d9a.chunk.css",
+    "main.js": "/shoppingCart/static/js/main.2411142e.chunk.js",
+    "main.js.map": "/shoppingCart/static/js/main.2411142e.chunk.js.map",
+    "runtime-main.js": "/shoppingCart/static/js/runtime-main.b8619c85.js",
+    "runtime-main.js.map": "/shoppingCart/static/js/runtime-main.b8619c85.js.map",
+    "static/css/2.5dcc52c6.chunk.css": "/shoppingCart/static/css/2.5dcc52c6.chunk.css",
+    "static/js/2.1c385648.chunk.js": "/shoppingCart/static/js/2.1c385648.chunk.js",
+    "static/js/2.1c385648.chunk.js.map": "/shoppingCart/static/js/2.1c385648.chunk.js.map",
+    "index.html": "/shoppingCart/index.html",
+    "precache-manifest.154df9d1d02d200c5945d8ddc1ac3354.js": "/shoppingCart/precache-manifest.154df9d1d02d200c5945d8ddc1ac3354.js",
+    "service-worker.js": "/shoppingCart/service-worker.js",
+    "static/css/2.5dcc52c6.chunk.css.map": "/shoppingCart/static/css/2.5dcc52c6.chunk.css.map",
+    "static/css/main.27f54d9a.chunk.css.map": "/shoppingCart/static/css/main.27f54d9a.chunk.css.map",
+    "static/js/2.1c385648.chunk.js.LICENSE.txt": "/shoppingCart/static/js/2.1c385648.chunk.js.LICENSE.txt",
+    "static/media/arrow-down.svg": "/shoppingCart/static/media/arrow-down.d6daa5c7.svg",
+    "static/media/arrow-up.svg": "/shoppingCart/static/media/arrow-up.3a2680a8.svg",
+    "static/media/edit-2.svg": "/shoppingCart/static/media/edit-2.7a46c66f.svg",
+    "static/media/facebook.svg": "/shoppingCart/static/media/facebook.97d6cf91.svg",
+    "static/media/heart.svg": "/shoppingCart/static/media/heart.d56ceb1e.svg",
+    "static/media/instagram.svg": "/shoppingCart/static/media/instagram.7842a820.svg",
+    "static/media/menu.svg": "/shoppingCart/static/media/menu.907de1ca.svg",
+    "static/media/search.svg": "/shoppingCart/static/media/search.c899009a.svg",
+    "static/media/share-2.svg": "/shoppingCart/static/media/share-2.76b454cc.svg",
+    "static/media/shopping-bag.svg": "/shoppingCart/static/media/shopping-bag.1229a68c.svg",
+    "static/media/sliders.svg": "/shoppingCart/static/media/sliders.96ce117b.svg",
+    "static/media/trash-2.svg": "/shoppingCart/static/media/trash-2.e835055f.svg",
+    "static/media/twitter.svg": "/shoppingCart/static/media/twitter.dbdcf7aa.svg",
+    "static/media/user.svg": "/shoppingCart/static/media/user.c28dc7ca.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b8619c85.js",
+    "static/css/2.5dcc52c6.chunk.css",
+    "static/js/2.1c385648.chunk.js",
+    "static/css/main.27f54d9a.chunk.css",
+    "static/js/main.2411142e.chunk.js"
+  ]
+}
