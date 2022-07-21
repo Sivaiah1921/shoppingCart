@@ -14,6 +14,7 @@ const initProduct = {
   _products: []
 };
 
+console.log(initProduct,"numberCart")
 function todoProduct(state = initProduct, action) {
   switch (action.type) {
     case GET_ALL_PRODUCT:
