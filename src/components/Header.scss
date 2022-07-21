@@ -5,37 +5,43 @@
   justify-content: space-between;
   background: transparent;
   border-bottom: 2px solid grey;
-  &__Start {
+  &__hover {
+    position: absolute;
+    top: 3.7rem;
+    right: 3rem;
+    background-color: red;
+    width: 400px;
+  }
+  &__logo {
     font-weight: 600;
     padding-left: 15px;
     font-size: 20px;
-    // padding: 1rem;
+    
     padding-top: 30px;
     padding-bottom: 30px;
     letter-spacing: 3px;
-   
+    a:hover {
+      text-decoration: none;
+    }
 
   }
 
-  // &__middle {
-  //   letter-spacing: 3px;
-  // }
+  
   &__StartSpan {
     color: lightblue; 
     letter-spacing: 3px;
-  //   .text-gradient {
-  //   color: linear-gradient(blue);
 
-  // }
   }
 
   &__Center {
     display: flex;
-   
+    color: white;
     width: 20rem;
     justify-content: space-around;
     padding-top:30px;
     padding-bottom:30px;
+    text-decoration: none;
+    list-style-type: none;
 
   }
 

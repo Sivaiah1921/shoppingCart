@@ -7,7 +7,7 @@ import edit from "../Assets/edit-2.svg"
 import "./Cart.scss"
 
 export const Cart = ({ items, IncreaseQuantity, DecreaseQuantity, DeleteCart }) => {
-  //  console.log(items)
+
   let ListCart = [];
   let TotalCart = 0;
   Object.keys(items.Carts).forEach(function (item) {

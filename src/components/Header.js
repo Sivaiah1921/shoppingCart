@@ -1,44 +1,47 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link,NavLink} from "react-router-dom";
 import { connect } from "react-redux";
-// import maxwidth_hader from "../Assets/header.svg"
+
 import shoppingBag from "../Assets/shopping-bag.svg";
 import Search from "../Assets/search.svg";
 import User from "../Assets/user.svg";
 import menu from "../Assets/menu.svg"
-
+import Login from "./Signin/Login";
 import './Header.scss'
 
-export class Header extends Component {
-  state={
-    toggle:false
-  }
+const Header = () =>{
+    const [toggle,setToggle] = useState(false)
+    const [show,setShow] = useState( false)
 
-  handleOpen = ()=>{
-    this.setState({toggle : true})
-  }
-  handleClose =()=>{
-    this.setState({toggle : false})
-  }
+    const handleOpen = () =>{
+      setToggle({toggle: true})
+    }
 
+    const handleClose = () =>{
+      setToggle({toggle: false})
+    }
+    const handleShowLogin = ()=>{
+      setShow(true)
+    }
+    const handleShowLoginoff =()=>{
+      setShow(false)
+    }
 
-  render() {
-    const {toggle} = this.state
-
-    console.log(toggle,"toggleSpan")
-    return (
+     return (
       <>
         <div className="header">
-          {/* <img src={max-width_header.svg} alt="maxwidth" /> */}
-          <div className="header__Start">
-            <div><span className='header__StartSpan'>V</span>ENIA</div>
+     
+          <div className="header__logo">
+            <Link><span className='header__StartSpan'>V</span>ENIA</Link>
 
           </div>
           <div className="header__Center">
-            <div>Women</div>
-            <div>Men</div>
-            <div>Smart Gear</div>
-            <div>Accessories</div>
+           
+            <li><NavLink to={'/'}>Women</NavLink></li>
+            <li><NavLink to={'/men'}>Men</NavLink></li>
+            <li><NavLink to={'/Smart Gear'}>Smart Gear</NavLink></li>
+            <li><NavLink to={'/Accessories'}>Accessories</NavLink></li>
+            
           </div>
           <div className="header__Last">
             <div className="header__Last__search">
@@ -46,10 +49,13 @@ export class Header extends Component {
               <img src={Search} alt="search" />
               Search
             </div>
-            <div className="header__Last__user">
+            <div className="header__Last__user" onMouseOver={handleShowLogin} onMouseLeave={handleShowLoginoff}>
               {" "}
               <img src={User} alt="User" />
               SignIn
+              {show &&  <div className="header__hover">
+                <Login  />
+                </div>}
             </div>
             <div className="nav-item">
               <Link to="/carts">
@@ -59,7 +65,7 @@ export class Header extends Component {
           </div>
         </div>
         <div className="headerSm">
-          <img className='headerSm__start' src={menu} alt="menu" onClick={this.handleOpen} />
+          <img className='headerSm__start' src={menu} alt="menu" onClick={handleOpen} />
           <div className='headerSm__text'><span className='headerSm__middle'>V</span>ENIA</div>
           <div className='headerSm__last'>
             <img src={Search} alt="search" />
@@ -71,7 +77,7 @@ export class Header extends Component {
         </div>
         { toggle && (
                   <div className="headerSmSidebar">
-                  <div onClick={this.handleClose}>X</div>
+                  <div onClick={handleClose}>X</div>
                   <div>item1</div>
                   <div>item1</div>
                   <div>item1</div>
@@ -81,10 +87,12 @@ export class Header extends Component {
                 </div>
         )}
 
+        
       </>
-    );
-  }
+    ); 
 }
+
+
 const mapStateToProps = (state) => {
   return {
     numberCart: state._todoProduct.numberCart
