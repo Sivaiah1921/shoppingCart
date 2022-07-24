@@ -22,13 +22,8 @@ const Product = (props) =>{
     <div style={{ marginTop: "10px" }}>
       <div className="product">
         <div className="product__banner">
-          <div>
-            <div>Women's</div>
-           
-          </div>
-          <div>AdobeStock</div>
-
-
+            <div className="product__bannerBar">All</div>
+            <div>AdobeStock</div>
         </div>
         <div className="product__list">
           <div>Clothing /  Women's /  Outerwear</div>

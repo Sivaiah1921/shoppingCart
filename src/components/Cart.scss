@@ -1,28 +1,137 @@
+.cart {
+    &__span {
+        margin-left: 18rem;
+        font-weight: 1000;
+        font-size: 50px;
 
-.Cart {
+    }
 
-&__span {
-    // background-color: green;
-    font-weight: 1000;
-    font-size: 50px;
-    // margin-left: 0.5rem;
-}  
+    &__span__children {
+        border: 1px solid #1F39FF;
+        width: 110px;
+        height: 10px;
+        margin-left: 28rem;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        background-color: #1F39FF;
+    }
 
-&__span__children {
-    border: 1px solid #1F39FF;
-    width: 110px;
-    height: 10px;
-    margin-left: 12.2rem;
-    margin-bottom: 5px;
-    margin-top:5px;
-    background-color: #1F39FF;
-}
+    &__storm {
+        margin-top: -10px;
+        margin-left: 10px;
+    }
 
-&__badge__badge__danger {
-    // display: flex;
+    &__medium {
+        margin-left: 10px;
+    }
+
+    &__badge {
+        display: flex;
+        flex-direction: column;
+        margin: 2rem;
+
+        :nth-child(1) {
+            margin-right: 5px;
+        }
+    }
+
+    &__price {
+        display: flex;
+        margin-top: -9px;
+        margin-right: 5rem;
+        margin-left: 10px;
+    }
+
+    &__button {
+        display: flex;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    &__increse {
+        padding: 5px;
+        border: 2px solid gray;
+        border-radius: 50%;
+    }
+
+    &__info {
+        display: flex;
+        padding: 5px;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        width: 100px;
+        border: 2px solid gray;
+        border-radius: 8px;
+    }
+
+    &__dicrese {
+        padding: 5px;
+        border: 2px solid gray;
+        border-radius: 50%;
+    }
+
+    &__table {
+        display: flex;
+    }
+
     
-    // background-color: blue;
-    // flex-direction:row;
-    // flex-direction: column;
+    &__payList {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid gray;
+        gap: 0;
+        padding: 15px;
+        width: 21rem;
+        height: 26rem;
+        margin-top: 3rem;
+        :nth-child(1){
+            margin: 15px;
+        }
+    }
+
+    &__pricetag {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5px;
+    }
+    &__coupontag {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5px;
+    }
+    &__giftcardtag {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5px;
+    }
+    &__rightTaxtag {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5px;
+    }
+    &__rightShiptag {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5px;
+    }
+    &__rightTotaltag {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5px;
+    }
 }
+
+.cartMobile {
+    display: none;
+}
+
+
+@media only screen and (max-width:720px) {
+    .cart {
+        display: none;
+    }
+
+    .cartMobile {
+        display: block;
+    }
 }

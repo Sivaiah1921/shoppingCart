@@ -9,7 +9,7 @@ import menu from "../Assets/menu.svg"
 import Login from "./Signin/Login";
 import './Header.scss'
 
-const Header = () =>{
+const Header = ({items,numberCart}) =>{
     const [toggle,setToggle] = useState(false)
     const [show,setShow] = useState( false)
 
@@ -27,20 +27,21 @@ const Header = () =>{
       setShow(false)
     }
 
+    console.log(items.Carts.length,"items,numberCart")
      return (
       <>
         <div className="header">
      
           <div className="header__logo">
-            <Link><span className='header__StartSpan'>V</span>ENIA</Link>
+            <Link to='/'><span className='header__StartSpan'>V</span>ENIA</Link>
 
           </div>
           <div className="header__Center">
            
-            <li><NavLink to={'/'}>Women</NavLink></li>
-            <li><NavLink to={'/men'}>Men</NavLink></li>
-            <li><NavLink to={'/Smart Gear'}>Smart Gear</NavLink></li>
-            <li><NavLink to={'/Accessories'}>Accessories</NavLink></li>
+            <li className="header__CenterLi"><NavLink to={'/Women'}>Women</NavLink></li>
+            <li className="header__CenterLi"><NavLink to={'/Men'}>Men</NavLink></li>
+            <li className="header__CenterLi"><NavLink to={'/Smart Gear'}>Smart Gear</NavLink></li>
+            <li className="header__CenterLi"><NavLink to={'/Accessories'}>Accessories</NavLink></li>
             
           </div>
           <div className="header__Last">
@@ -57,10 +58,11 @@ const Header = () =>{
                 <Login  />
                 </div>}
             </div>
-            <div className="nav-item">
+            <div className="header__Cartbag">
               <Link to="/carts">
                 <img src={shoppingBag} alt="text" />
               </Link>
+              <span>{items.Carts.length}</span>
             </div>
           </div>
         </div>
@@ -69,9 +71,12 @@ const Header = () =>{
           <div className='headerSm__text'><span className='headerSm__middle'>V</span>ENIA</div>
           <div className='headerSm__last'>
             <img src={Search} alt="search" />
-            <Link to="/carts">
-              <img src={shoppingBag} alt="text" />
-            </Link>
+            <div className="header__Cartbag">
+              <Link to="/carts">
+                <img src={shoppingBag} alt="text" />
+              </Link>
+              <span>{items.Carts.length}</span>
+            </div>
           </div>
 
         </div>
@@ -95,7 +100,10 @@ const Header = () =>{
 
 const mapStateToProps = (state) => {
   return {
-    numberCart: state._todoProduct.numberCart
+    numberCart: state._todoProduct.numberCart,
+    items: state._todoProduct
   };
 };
 export default connect(mapStateToProps, null)(Header);
+
+

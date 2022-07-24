@@ -9,6 +9,10 @@ import Swatch1 from '../Assets/Swatch 01.png';
 import Swatch2 from '../Assets/Swatch 02.png';
 import Swatch3 from '../Assets/Swatch 03.png';
 import Swatch4 from '../Assets/Swatch 04.png';
+import { GiTreeBranch } from "react-icons/gi";
+import { WiHot } from "react-icons/wi";
+import { GiLindenLeaf } from "react-icons/gi";
+import { HiDocumentDuplicate } from "react-icons/hi";
 
 
 const CartDetails = () => {
@@ -31,9 +35,9 @@ const CartDetails = () => {
   console.log(data, "getProfuctDetails");
   return (
     <>
-      <div className="CartDetails">
-        <div className="CartDetails__top">
-          <div className="CartDetails__left">
+      <div className="cartDetails">
+        <div className="cartDetails__top">
+          <div className="cartDetails__left">
             <img
               src={data?.image}
               alt="img"
@@ -41,12 +45,12 @@ const CartDetails = () => {
               height={600}
               className="img-resposive"
             />
-            <div className="CartDetails__itemName">
+            <div className="cartDetails__itemName">
               <div>Mens Casual Premium Slim Fit T-Shirts </div>
             </div>
 
           </div>
-          <div className="CartDetails__right">
+          <div className="cartDetails__right">
             <h5>{data?.title}</h5>
             <h5> ${data?.price}</h5>
             <div >
@@ -57,31 +61,31 @@ const CartDetails = () => {
             <div className="cartDetails__border">
               <div></div>
             </div>
-            <div className="CartDetails__text">
+            <div className="cartDetails__text">
               <div>Color</div>
             </div>
-            <div className="CartDetails__text__color">
+            <div className="cartDetails__color">
 
-              <span className="CartDetails__text__color1"></span>
-              <span className="CartDetails__text__color2"></span>
-              <span className="CartDetails__text__color3"></span>
-              <span className="CartDetails__text__color4"></span>
+              <span><img src={Swatch1} /></span>
+              <span ><img src={Swatch2} /></span>
+              <span ><img src={Swatch3} /></span>
+              <span ><img src={Swatch4} /></span>
             </div>
-            <div className="CartDetails__size">
+            <div className="cartDetails__size">
               <div>Size</div>
             </div>
-            <div className="CartDetails__rectangls">
-              <button className="CartDetails__rectangls1">XS</button>
-              <button className="CartDetails__rectangls2">S</button>
-              <button className="CartDetails__rectangls3">M</button>
-              <button className="CartDetails__rectangls4">L</button>
-              <button className="CartDetails__rectangls5">XL</button>
+            <div className="cartDetails__button">
+              <button >XS</button>
+              <button >S</button>
+              <button >M</button>
+              <button >L</button>
+              <button >XL</button>
             </div>
-            <div className="CartDetails__quantity">
+            <div className="cartDetails__quantity">
               <div>Quantity</div>
               <div>
                 <span
-                  className={`${quantity === 0 ? "CartDetails__disable" : "CartDetails__span1"}`}
+                  className={`${quantity === 0 ? "cartDetails__disable" : "cartDetails__span1"}`}
                   style={{ margin: "2px" }}
                   onClick={() => {
                     quantity > 0 && setquantity((prev) => --prev)
@@ -89,9 +93,9 @@ const CartDetails = () => {
                 >
                   -
                 </span>
-                <span className="CartDetails__span2">{quantity}</span>
+                <span className="cartDetails__span2">{quantity}</span>
                 <span
-                  className="CartDetails__span3"
+                  className="cartDetails__span3"
                   style={{ margin: "2px" }}
                   onClick={() => setquantity((prev) => ++prev)}
                 >
@@ -101,47 +105,45 @@ const CartDetails = () => {
 
             </div>
             <span
-              className="CartDetails__cart"
+              className="cartDetails__cart"
               style={{ cursor: "pointer" }}
               onClick={() => dispatch(AddCart(data, quantity))}
             >
               ADD TO CART
             </span>
-            <div className="CartDetails__icons">
+            <div className="cartDetails__icons">
               <img src={heart} alt="heart" />
-              <li className="CartDetails__save">Save</li>
+              <li className="cartDetails__save">Save</li>
               <img src={share} alt="share" />
-              <li className="CartDetails__share">Share</li>
+              <li className="cartDetails__share">Share</li>
             </div >
           </div>
 
         </div>
-        <div className="CartDetails__description">
-          <div className="CartDetails__leftList">
+        <div className="cartDetails__description">
+          <div className="cartDetails__leftList">
             <h5>Description</h5>
             <p>Slim-fitting style, contrast raglan long sleeve, three-button henley
               placket, light weight & soft fabric for breathable and comfortable
               wearing.</p>
           </div>
-          <div className="CartDetails__rightList">
+          <div className="cartDetails__rightList">
             <h5>Details</h5>
-            <div className="CartDetails__rightListItems">
-              <div>
-                <p className="CartDetails__icons">Sweat-wicking</p>
-                <p>Lightweight fabric</p></div>
-              <div>
-                <p className="CartDetails__icons">Breathable</p>
-                <p>69% nylon, 31% lycra</p>
+            <div className="cartDetails__rightListItems">
+              <div className="cartDetails__iconsItem1">
+                <p> <GiTreeBranch  />Sweat-wicking</p>
+                <p><GiLindenLeaf /> Lightweight fabric</p></div>
+              <div className="cartDetails__iconsItem2">
+                <p ><WiHot />Breathable</p>
+                <p> <HiDocumentDuplicate />69% nylon, 31% lycra</p>
               </div>
-
-
 
             </div>
 
 
           </div>
         </div>
-        <div className="CartDetails__details__children"> </div>
+        <div className="cartDetails__children"> </div>
 
         {/* //break */}
 
@@ -184,18 +186,18 @@ const CartDetails = () => {
         <div className="cartDetailsMobile__size">
           <h5>Size</h5>
         </div>
-        <div className="cartDetailsMobile__rectangls">
-          <button className="cartDetailsMobile__rectangls1">XS</button>
-          <button className="cartDetailsMobile__rectangls2">S</button>
-          <button className="cartDetailsMobile__rectangls3">M</button>
-          <button className="cartDetailsMobile__rectangls4">L</button>
-          <button className="cartDetailsMobile__rectangls5">XL</button>
+        <div className="cartDetailsMobile__button">
+          <button >XS</button>
+          <button >S</button>
+          <button >M</button>
+          <button >L</button>
+          <button >XL</button>
         </div>
         <div className="cartDetailsMobile__quantity">
           <h5>Quantity</h5>
-          <div>
+          <div className="cartDetailsMobile__quantityMobile">
             <span
-              className={`${quantity === 0 ? "CartDetailsMobile__disable" : "CartDetails__span1"}`}
+              className={`${quantity === 0 ? "cartDetailsMobile__disable" : "cartDetailsMobile__span1"}`}
               style={{ margin: "2px" }}
               onClick={() => {
                 quantity > 0 && setquantity((prev) => --prev)
@@ -223,9 +225,9 @@ const CartDetails = () => {
         </span>
         <div className="cartDetailsMobile__icons">
           <ul>
-            {/* <img src={heart} alt="heart" /> */}
+            
             <li><a href="#"><img src={heart} /></a>Save</li>
-            {/* <img src={share} alt="share" /> */}
+           
             <li><a href="#"><img src={share} />Share</a></li>
           </ul>
         </div >
@@ -238,6 +240,7 @@ const CartDetails = () => {
 
         <div className="cartDetailsMobile__description">
           <h5>Description</h5>
+          
         </div>
 
         <div className="cartDetailsMobile__description__content">
@@ -250,7 +253,16 @@ const CartDetails = () => {
         </div>
         <div className="cartDetailsMobile__details">
           <h5>Details</h5>
-        </div>
+          </div>
+          <div className="cartDetailsMobile__iconsItem">
+           <p><GiTreeBranch  />Sweat-wicking</p>
+           <p><GiLindenLeaf /> Lightweight fabric</p>
+          </div>
+          <div className="cartDetailsMobile__iconsItem">
+          <p ><WiHot />Breathable</p>
+          <p> <HiDocumentDuplicate />69% nylon, 31% lycra</p>
+          </div>
+       
 
         <span className="cartDetailsMobile__details__children"> </span>
 

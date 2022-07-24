@@ -33,6 +33,17 @@
 
       }
    }
+   &____bannerBar {
+      background: red;
+      position: relative;
+      ::before {
+         content: '';
+         width: 20px;
+         height: 20px;
+         background-color: yellow;
+
+      }
+   }
 
    &__listrightsm {
       display: none;

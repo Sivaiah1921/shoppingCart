@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import {Link,NavLink} from "react-router-dom"
 import {useForm} from "react-hook-form"
+import "./LoginForm.scss"
 
 const LoginForm = ({Login,error}) => {
     const {
@@ -64,14 +65,14 @@ const LoginForm = ({Login,error}) => {
                 <small className="text-danger">{errors.password1.message}</small>
             )}
         </div>
-        <div className='form-group'>
+        <div className='form-group1'>
             <Link to='#' className='forgetpass'>Forgot Password?</Link>
         </div>
         <div className='button-section'>
             <button className="button-primary">SIGN IN</button>
         </div>
         <hr />
-        <div className='button-section'>
+        <div className='button-section1'>
             <NavLink to="/signup" className="signup">
                 CREATE ACCOUNT
             </NavLink>
