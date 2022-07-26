@@ -72,9 +72,10 @@
 
     &__table {
         display: flex;
+        height: 35rem;
     }
 
-    
+
     &__payList {
         display: flex;
         flex-direction: column;
@@ -82,9 +83,10 @@
         gap: 0;
         padding: 15px;
         width: 21rem;
-        height: 26rem;
+        height: 25rem;
         margin-top: 3rem;
-        :nth-child(1){
+
+        :nth-child(1) {
             margin: 15px;
         }
     }
@@ -93,33 +95,81 @@
         display: flex;
         justify-content: space-between;
         padding: 0 5px;
+        align-items: center;
+        height: 2rem;
     }
+
     &__coupontag {
         display: flex;
         justify-content: space-between;
         padding: 0 5px;
+        align-items: center;
+        height: 2rem;
+
     }
+
     &__giftcardtag {
         display: flex;
         justify-content: space-between;
         padding: 0 5px;
+        align-items: center;
+        height: 2rem;
+
     }
+
     &__rightTaxtag {
         display: flex;
         justify-content: space-between;
         padding: 0 5px;
+        align-items: center;
+        height: 2rem;
+
     }
+
     &__rightShiptag {
         display: flex;
         justify-content: space-between;
         padding: 0 5px;
+        align-items: center;
+        height: 2rem;
+
     }
+
     &__rightTotaltag {
         display: flex;
         justify-content: space-between;
         padding: 0 5px;
+        align-items: center;
+        height: 2rem;
+
     }
+
+    &__checkbtn {
+        background-color: blue;
+        color: white;
+        margin-left: 18px;
+        width: 236px;
+        margin-top: 1rem;
+        padding: 6px;
+        border: 1px solid blue;
+        border-radius: 20px;
+    }
+
+    &__tableChild {
+        gap: 5rem;
+        display: flex;
+
+        flex-direction: column;
+    }
+
+    &__accordion {
+        background-color: red;
+        width: 42rem;
+    }
+
 }
+
+
 
 .cartMobile {
     display: none;
@@ -133,5 +183,109 @@
 
     .cartMobile {
         display: block;
-    }
+        flex-direction: row;
+        &__content {
+            align-items: center;
+            display: flex;
+            gap: 2rem;
+            margin: 0 20px;
+        }
+        &__span {
+            display: flex;
+            margin-left: 0.1rem;
+            font-size: 25px;
+            font-weight: 600;
+        }
+        &__spanChildren {
+           border: 1px solid blue;
+           background-color: #1F39FF;
+           padding: 2.5px;
+           width: 10rem;
+           margin-left: 20px;
+           margin-top: 2rem;
+           margin-bottom: 0.8rem;
+
+        }
+  
+        &__imageRight {
+           margin-bottom: 10px;
+        }
+
+        &__dicrease {
+            border: 2px solid gray;
+            border-radius: 30px;
+            height: -10px;
+            padding: 3px;
+        }
+
+        &__quantity {
+            
+            border: 2px solid gray;
+            border-radius: 10px;
+            width: 8rem;
+            padding: 4px;
+            padding-left: 3.8rem;
+            margin-left: 4px;
+            margin-right: 4px;
+          
+        }
+
+        &__increase {
+           
+            border: 2px solid gray;
+            border-radius:100px;
+            width: 3px;
+            padding: 2px;
+           
+        }
+      
+        &__payList {
+            margin-top: 20px;
+            
+        }
+
+        &__price {
+            display: flex;
+            gap: 32rem;
+            margin-top: 20px;
+        }
+        &__coupontag {
+            display: flex;
+            gap: 30.6rem;
+        }
+        &__giftcardtag {
+            display: flex;
+            gap: 30.6rem;
+        }
+        &__rightTaxtag {
+            display: flex;
+            gap: 29rem;
+        }
+        &__rightShiptag {
+            display: flex;
+            gap: 30rem;
+        }
+        &__rightTotaltag {
+            display: flex;
+            gap: 29.5rem;
+        }
+        &__payment {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 10px;
+            :nth-child(1){
+                border: 2px solid gray;
+                background-color: #1F39FF;
+                color: white;
+                border-radius: 20px;
+                width: 10rem;
+                margin-bottom: 10px;
+                margin-left: 12rem;
+                margin-right: -12rem;
+            }
+        }
+            }
+
+
 }

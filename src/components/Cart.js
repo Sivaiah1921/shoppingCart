@@ -1,9 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
 import { IncreaseQuantity, DecreaseQuantity, DeleteCart } from "../actions";
+import { Link } from "react-router-dom";
 import trash from "../Assets/trash-2.svg"
 import heart from "../Assets/heart.svg"
 import edit from "../Assets/edit-2.svg"
+import PPBTN from "../Assets/PP_BTN.png"
 import Accordion from "./Accordion/Accordion";
 import "./Cart.scss"
 
@@ -29,66 +31,69 @@ export const Cart = ({ items, IncreaseQuantity, DecreaseQuantity, DeleteCart }) 
             <div className="cart__span__children"> </div>
 
             <table className="cart__table">
-              <tbody>
-                {ListCart.length === 0 ? (<h1>Your cart is Empty </h1>) : (
-                  ListCart.map((item, key) => {
-                    return (
-                      <tr key={key}>
-                        <td>{item.name}</td>
-                        <td>
-                          <img
-                            src={item.image}
-                            alt="img"
-                            style={{
-                              width: "200px", height: "150px",
-                            }}
-                          />
-                        </td>
-                        <div className="cart__desktop">
-                          <span className="cart__details">
-                            <h5>{item.title}</h5>
-                            <p className="cart__medium">Size:Medium</p>
-                            <p className="cart__storm">Color:Storm</p>
-                            <p className="cart__price">Price: ${item.price}</p>
-                          </span>
-                        </div>
-                        <td>
-                          <div className="cart__button">
-                            <span
-                              className="cart__increse"
-                              style={{ margin: "2px" }}
-                              onClick={() => DecreaseQuantity(key)}
-                            >
-                              -
-                            </span>
-                            <span className="cart__info">{item.quantity}</span>
-                            <span
-                              className="cart__dicrese"
-                              style={{ margin: "2px" }}
-                              onClick={() => IncreaseQuantity(key)}
-                            >
-                              +
+              <div className="cart__tableChild">
+                <tbody>
+                  {ListCart.length === 0 ? (<h1>Your cart is Empty </h1>) : (
+                    ListCart.map((item, key) => {
+                      return (
+                        <tr key={key}>
+                          <td>{item.name}</td>
+                          <td>
+                            <img
+                              src={item.image}
+                              alt="img"
+                              style={{
+                                width: "200px", height: "150px",
+                              }}
+                            />
+                          </td>
+                          <div className="cart__desktop">
+                            <span className="cart__details">
+                              <h5>{item.title}</h5>
+                              <p className="cart__medium">Size:Medium</p>
+                              <p className="cart__storm">Color:Storm</p>
+                              <p className="cart__price">Price: ${item.price}</p>
                             </span>
                           </div>
-                        </td>
-                        <td>
-                          <i
-                            className="cart__badge"
-                            onClick={() => DeleteCart(key)}
-                          >
-                            <p><img src={edit} />Edit Item</p>
-                            <p><img src={trash} />Remove</p>
-                            <p><img src={heart} />Save for later</p>
-                          </i>
-                        </td>
-                        <>
+                          <td>
+                            <div className="cart__button">
+                              <span
+                                className="cart__increse"
+                                style={{ margin: "2px" }}
+                                onClick={() => DecreaseQuantity(key)}
+                              >
+                                -
+                              </span>
+                              <span className="cart__info">{item.quantity}</span>
+                              <span
+                                className="cart__dicrese"
+                                style={{ margin: "2px" }}
+                                onClick={() => IncreaseQuantity(key)}
+                              >
+                                +
+                              </span>
+                            </div>
+                          </td>
+                          <td>
+                            <i
+                              className="cart__badge"
+                              onClick={() => DeleteCart(key)}
+                            >
+                              <p><img src={edit} />Edit Item</p>
+                              <p><img src={trash} />Remove</p>
+                              <p><img src={heart} />Save for later</p>
+                            </i>
+                          </td>
+                        </tr>
+                      );
+                    })
+                  )}
+                </tbody>
+                <div className="cart__accordion">
+                  <Accordion />
+                </div>
+              </div>
 
-                        </>
-                      </tr>
-                    );
-                  })
-                )}
-              </tbody>
               {ListCart.length > 0 && (
                 <div className="cart__payList">
                   <h4>Pricing Summery</h4>
@@ -109,17 +114,19 @@ export const Cart = ({ items, IncreaseQuantity, DecreaseQuantity, DeleteCart }) 
                     <p>89$</p>
                   </div>
                   <div className="cart__rightShiptag">
-                    <p>Estimated shipping</p>
+                    <p>Estimated shipping:</p>
                     <p>6$</p>
                   </div>
                   <div className="cart__rightTotaltag">
-                    <p><b>Estimated Total: </b></p>
-                    <p><b>48 $</b></p>
+                    <p>Estimated Total:</p>
+                    <p>69$</p>
                   </div>
+                  <button onClick={() => alert('under maintance')} className="cart__checkbtn"><i className="fa fa-lock"></i>Checkout</button>
+                  <Link to="#"><img src={PPBTN} alt="paypal" /></Link>
                 </div>
               )}
             </table>
-            <Accordion />
+
           </div>
         </div>
       </div>
@@ -131,64 +138,58 @@ export const Cart = ({ items, IncreaseQuantity, DecreaseQuantity, DeleteCart }) 
           <div className="cartMobile__col-md-12">
             <span className="cartMobile__span">Your Shopping Bag</span>
 
-            <div className="cartMobile__span__children"> </div>
+            <div className="cartMobile__spanChildren"> </div>
 
             <table className="cartMobile__table">
-              <thead></thead>
+
               <tbody>
-                {ListCart.length === 0 ? (<h1>Your cart is Empty </h1>) : (
+                {ListCart.length === 0 ? ('') : (
                   ListCart.map((item, key) => {
                     return (
-                      <tr key={key}>
-                        <td>
-                          <i
-                            className="cartMobile__badge__badge__danger"
-                            onClick={() => DeleteCart(key)}
-                          >
-                            <img src={edit} alt="edit" />   Edit Item
-                            <img src={trash} alt="trash" /> Remove
-                            <img src={heart} alt="heart" />   Save for Later
-                          </i>
-                        </td>
-                        <td>{item.name}</td>
-                        <td>
-                          <img
-                            src={item.image}
-                            alt="img"
-                            style={{ width: "100px", height: "80px" }}
-                          />
-                        </td>
-                        <div className="cartMobile__mobile">
-                          <span className="cartMobile__details">
-                            <h5>{item.title}</h5>
-                            <p>Size:Medium</p>
-                            <p>Color:Storm</p>
-                            <p className="cartMobile__price">Price: ${item.price}</p>
-                          </span>
+                      <div key={key}>
+                        <div className="cartMobile__content">
+                          <div className="cartMobile__imageLeft">
+                            <img
+                              src={item.image}
+                              alt="img"
+                              style={{ width: "120px", height: "90px" }}
+                            />
+                          </div>
+                          <div className="cartMobile__imageRight">
+                            <span className="cartMobile__details">
+                              <h5>{item.title}</h5>
+                              <p>Size:Medium</p>
+                              <p>Color:Storm</p>
+                              <p className="cartMobile__price">Price: ${item.price}</p>
+                              <div>...</div>
+                            </span>
+                             
+                            <div>
+                              <span
+                                className="cartMobile__dicrease"
+                                style={{ margin: "2px" }}
+                                onClick={() => DecreaseQuantity(key)}
+                              >
+                                -
+                              </span>
+                              <span className="cartMobile__quantity">{item.quantity}</span>
+                              <span
+                                className="cartMobile__increase"
+                                style={{ margin: "2px" }}
+                                onClick={() => IncreaseQuantity(key)}
+                              >
+                                +
+                              </span>
+                            </div>
+                          </div>
                         </div>
-                        <td>
-                          <span
-                            className="btn btn-primary"
-                            style={{ margin: "2px" }}
-                            onClick={() => DecreaseQuantity(key)}
-                          >
-                            -
-                          </span>
-                          <span className="btn btn-info">{item.quantity}</span>
-                          <span
-                            className="btn btn-primary"
-                            style={{ margin: "2px" }}
-                            onClick={() => IncreaseQuantity(key)}
-                          >
-                            +
-                          </span>
-                        </td>
-                        <td>{TotalPrice(item.price, item.quantity)} $</td>
-                      </tr>
+                        <Accordion />
+                      </div>
                     );
                   })
                 )}
               </tbody>
+
               {ListCart.length > 0 && (
                 <div className="cartMobile__payList">
                   <h4>Pricing Summery</h4>
@@ -206,20 +207,24 @@ export const Cart = ({ items, IncreaseQuantity, DecreaseQuantity, DeleteCart }) 
                   </div>
                   <div className="cartMobile__rightTaxtag">
                     <p>Estimated tax</p>
-                    {/* <p>${taxPrice.toFixed(2)}</p> */}
+                    <p>-$90</p>
                   </div>
                   <div className="cartMobile__rightShiptag">
                     <p>Estimated shipping</p>
-                    {/* <p>${shippingPrice.toFixed(2)}</p> */}
+                    <p>FREE</p>
                   </div>
                   <div className="cartMobile__rightTotaltag">
-                    <p>Estimated Total: 48 $</p>
-                    <p>67$</p>
+                    <p>Estimated Total: </p>
+                     <p>$48 </p>
+                  </div>
+                  <div className="cartMobile__payment">
+                  <button onClick={() => alert('under maintance')} ><i className="fa fa-lock"></i>Checkout</button>
+                  <Link to="#"><img src={PPBTN} alt="paypal" /></Link>
                   </div>
                 </div>
               )}
             </table>
-            <Accordion />
+
           </div>
         </div>
       </div>

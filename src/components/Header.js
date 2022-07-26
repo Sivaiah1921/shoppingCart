@@ -10,15 +10,15 @@ import Login from "./Signin/Login";
 import './Header.scss'
 
 const Header = ({items,numberCart}) =>{
-    const [toggle,setToggle] = useState(false)
+    const [toggle,setToggle] = useState( false )
     const [show,setShow] = useState( false)
 
     const handleOpen = () =>{
-      setToggle({toggle: true})
+      setToggle( true)
     }
 
     const handleClose = () =>{
-      setToggle({toggle: false})
+      setToggle(  false )
     }
     const handleShowLogin = ()=>{
       setShow(true)
@@ -80,15 +80,17 @@ const Header = ({items,numberCart}) =>{
           </div>
 
         </div>
-        { toggle && (
+        { toggle === true && (
                   <div className="headerSmSidebar">
                   <div onClick={handleClose}>X</div>
-                  <div>item1</div>
-                  <div>item1</div>
-                  <div>item1</div>
-                  <div>item1</div>
-                  <div>item1</div>
-                  <div>item1</div>
+                 
+                  <h5>Shop Catogories</h5>
+                  
+                  <span ><NavLink to={'/Women'}>Women</NavLink></span>
+                  <span ><NavLink to={'/Men'}>Men</NavLink></span>
+                  < span><NavLink to={'/Smart Gear'}>Smart Gear</NavLink></span>
+                  < span><NavLink to={'/Accessories'}>Accessories</NavLink></span>
+             
                 </div>
         )}
 
