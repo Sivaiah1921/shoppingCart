@@ -9,7 +9,6 @@
     display: flex;
     justify-content: center;
 
-
   }
 
   &__quantity {
@@ -93,10 +92,6 @@
     display: flex;
     margin-top: 8px;
     margin-bottom: 3px;
-
-    :nth-child(1) {
-      // background-color: #5C87FF  ;  
-    }
 
     :nth-child(2) {
 
