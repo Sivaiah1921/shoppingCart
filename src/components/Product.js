@@ -16,7 +16,7 @@ const Product = (props) =>{
 
   useEffect(() =>{
      props.actFetchProductsRequest();
-  },[])
+  },[props])
  
   return (
     <div style={{ marginTop: "10px" }}>

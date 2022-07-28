@@ -111,15 +111,15 @@ export const Cart = ({ items, IncreaseQuantity, DecreaseQuantity, DeleteCart }) 
                   </div>
                   <div className="cart__rightTaxtag">
                     <p>Estimated tax</p>
-                    <p>89$</p>
+                    <p>$89</p>
                   </div>
                   <div className="cart__rightShiptag">
                     <p>Estimated shipping:</p>
-                    <p>6$</p>
+                    <p>$6</p>
                   </div>
                   <div className="cart__rightTotaltag">
                     <p>Estimated Total:</p>
-                    <p>69$</p>
+                    <p>$69</p>
                   </div>
                   <button onClick={() => alert('under maintance')} className="cart__checkbtn"><i className="fa fa-lock"></i>Checkout</button>
                   <Link to="#"><img src={PPBTN} alt="paypal" /></Link>

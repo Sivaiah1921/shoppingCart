@@ -17,7 +17,7 @@ const WomenListing = (props) =>{
 
   useEffect(() =>{
      props.actFetchProductsRequest();
-  },[])
+  },[props])
  
   return (
     <div style={{ marginTop: "10px" }}>
