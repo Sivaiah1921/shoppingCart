@@ -12,7 +12,7 @@ import "./Cart.scss"
 export const Cart = ({ items, IncreaseQuantity, DecreaseQuantity, DeleteCart }) => {
 
   let ListCart = [];
-  let TotalCart = 0;
+  let TotalCart
   Object.keys(items.Carts).forEach(function (item) {
     TotalCart += items.Carts[item].quantity * items.Carts[item].price;
     ListCart.push(items.Carts[item]);
