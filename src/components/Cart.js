@@ -79,9 +79,9 @@ export const Cart = ({ items, IncreaseQuantity, DecreaseQuantity, DeleteCart }) 
                               className="cart__badge"
                               onClick={() => DeleteCart(key)}
                             >
-                              <p><img src={edit} />Edit Item</p>
-                              <p><img src={trash} />Remove</p>
-                              <p><img src={heart} />Save for later</p>
+                              <p><img src={edit} alt="edit"/>Edit Item</p>
+                              <p><img src={trash} alt="trash"/>Remove</p>
+                              <p><img src={heart} alt="heart"/>Save for later</p>
                             </i>
                           </td>
                         </tr>

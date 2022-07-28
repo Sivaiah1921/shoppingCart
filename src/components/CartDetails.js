@@ -66,10 +66,10 @@ const CartDetails = () => {
             </div>
             <div className="cartDetails__color">
 
-              <span><img src={Swatch1} /></span>
-              <span ><img src={Swatch2} /></span>
-              <span ><img src={Swatch3} /></span>
-              <span ><img src={Swatch4} /></span>
+              <span><img src={Swatch1} alt="switch1"/></span>
+              <span ><img src={Swatch2} alt="switch2"/></span>
+              <span ><img src={Swatch3}alt="switch3" /></span>
+              <span ><img src={Swatch4}alt="switch4" /></span>
             </div>
             <div className="cartDetails__size">
               <div>Size</div>
@@ -178,10 +178,10 @@ const CartDetails = () => {
         </div>
 
         <div className="cartDetailsMobile__color">
-          <span><img src={Swatch1} /></span>
-          <span><img src={Swatch2} /></span>
-          <span><img src={Swatch3} /></span>
-          <span><img src={Swatch4} /></span>
+          <span><img src={Swatch1} alt="switch1" /></span>
+          <span><img src={Swatch2} alt="switch2" /></span>
+          <span><img src={Swatch3} alt="switch3" /></span>
+          <span><img src={Swatch4} alt="switch4" /></span>
         </div>
         <div className="cartDetailsMobile__size">
           <h5>Size</h5>
@@ -226,9 +226,9 @@ const CartDetails = () => {
         <div className="cartDetailsMobile__icons">
           <ul>
             
-            <li><a href="#"><img src={heart} /></a>Save</li>
+            <li><a href="#"><img src={heart} alt="heart" /></a>Save</li>
            
-            <li><a href="#"><img src={share} />Share</a></li>
+            <li><a href="#"><img src={share} alt="share" />Share</a></li>
           </ul>
         </div >
 
