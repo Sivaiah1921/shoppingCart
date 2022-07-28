@@ -56,6 +56,8 @@
 
     &__info {
         display: flex;
+        align-items: center;
+        justify-content: center !important;
         padding: 5px;
         margin-left: 0.5rem;
         margin-right: 0.5rem;
