@@ -6,15 +6,13 @@ import "./LoginForm.scss"
 const LoginForm = ({Login,error}) => {
     const {
         register,
-        handleSubmit,
         formState: { errors },
-        reset,
         trigger,
     } = useForm();
 
-    const onSubmit = (data) => {
-        reset();
-    };
+    // const onSubmit = (data) => {
+    //     reset();
+    // };
     const [details, setDetails] = useState({ name: "", email: "", password: "" });
 
     const submitHandler = e => {

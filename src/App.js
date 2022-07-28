@@ -21,7 +21,7 @@ function App() {
         <Header />
         <Switch>
           <div className="container__wrapper">
-            <Route path="/" exact component={Product} />
+            <Route path="/shoppingCart" exact component={Product} />
             <Route path="/carts" exact component={Cart} />
             <Route path="/product/:id" exact component={CartDetails} />
             <Route path="/SignUp" exact component={SignUp} />

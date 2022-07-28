@@ -38,7 +38,7 @@ function todoProduct(state = initProduct, action) {
         state.Carts.push(cart);
       } else {
         let check = false;
-        state.Carts.map((item, key) => {
+        state.Carts.forEach((item, key) => {
           if (item.id === action.payload.id) {
             state.Carts[key].quantity++;
             check = true;
@@ -82,7 +82,7 @@ function todoProduct(state = initProduct, action) {
         ...state,                                                                            
         numberCart: state.numberCart - quantity_,
         Carts: state.Carts.filter((item) => {
-          return item.id != state.Carts[action.payload].id;
+          return item.id !== state.Carts[action.payload].id;
         })
       };
     default:

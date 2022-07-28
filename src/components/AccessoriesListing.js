@@ -82,7 +82,7 @@ const AccessoriesListing = (props) =>{
             <label style={{ display: 'flex', gap: "10px" }}><input type='checkbox' /> Option</label>
 
             <div className="product__sidebar__showmore">
-              <a href="#">Show more</a>
+              <a href="#Show more">Show more</a>
             </div>
 
             <div className="product__sidebar__attribute2">Attribute</div>

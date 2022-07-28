@@ -33,7 +33,7 @@ const Header = ({items,numberCart}) =>{
         <div className="header">
      
           <div className="header__logo">
-            <Link to='/'><span className='header__StartSpan'>V</span>ENIA</Link>
+            <Link to='/shoppingCart'><span className='header__StartSpan'>V</span>ENIA</Link>
 
           </div>
           <div className="header__Center">

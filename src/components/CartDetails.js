@@ -26,7 +26,7 @@ const CartDetails = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     getProductDetails(id);
-  }, []);
+  }, [id]);
   const getProductDetails = (id) => {
     fetch(`https://fakestoreapi.com/products/${id}`)
       .then((res) => res.json())
@@ -54,9 +54,9 @@ const CartDetails = () => {
             <h5>{data?.title}</h5>
             <h5> ${data?.price}</h5>
             <div >
-              <a onClick={() => setReadMore(!readMore)}>{linkName}
+              <span onClick={() => setReadMore(!readMore)}>{linkName}
                 {readMore ? 'Read Less ' : 'Read More '}
-              </a>
+              </span>
             </div>
             <div className="cartDetails__border">
               <div></div>
@@ -164,9 +164,9 @@ const CartDetails = () => {
 
 
         <div >
-          <a onClick={() => setReadMore(!readMore)}>{linkName}
+          <span onClick={() => setReadMore(!readMore)}>{linkName}
             {readMore ? 'Read Less ' : 'Read More '}
-          </a>
+          </span>
         </div>
 
         <div className="cartDetailsMobile__border">
@@ -226,9 +226,9 @@ const CartDetails = () => {
         <div className="cartDetailsMobile__icons">
           <ul>
             
-            <li><a href="#"><img src={heart} alt="heart" /></a>Save</li>
+            <li><a href="#Show more"><img src={heart} alt="heart" /></a>Save</li>
            
-            <li><a href="#"><img src={share} alt="share" />Share</a></li>
+            <li><a href="#Show more"><img src={share} alt="share" />Share</a></li>
           </ul>
         </div >
 
