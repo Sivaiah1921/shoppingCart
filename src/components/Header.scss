@@ -8,10 +8,10 @@
   &__hover {
     display: flex;  
     position: absolute;
-    top: 3.7rem;
+    top: 3.7rem;    
     right: 3rem;
     padding-left: 3rem;
-    margin-top: 2rem;
+    margin-top: 0rem;
     border: 1px solid gray;
     background-color: white;
     width: 400px;
@@ -71,9 +71,9 @@
   &__Last {
     display: flex;
     width: 14rem;
-   
     justify-content: space-around;
     align-items: center;
+   
 
     &__search {
       display: flex;
@@ -88,6 +88,7 @@
       width: 4.5rem;
       justify-content: space-between;
       align-items: center;
+      
     }
   }
 }

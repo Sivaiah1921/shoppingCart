@@ -16,9 +16,7 @@ export const Cart = ({ items, IncreaseQuantity, DecreaseQuantity, DeleteCart }) 
   Object.keys(items.Carts).forEach(function (item) {
     ListCart.push(items.Carts[item]);
   });
-  // function TotalPrice(price, tonggia) {
-  //   return Number(price * tonggia).toLocaleString("en-US");
-  // }
+
 
   return (
     <>
