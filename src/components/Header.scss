@@ -55,8 +55,8 @@
 
   &__Center {
     display: flex;
-    color: white;
-    width: 20rem;
+    // background-color: blue;
+    width: 25rem;
     justify-content: space-around;
     padding-top:30px;
     padding-bottom:30px;
@@ -73,8 +73,7 @@
     width: 14rem;
     justify-content: space-around;
     align-items: center;
-   
-
+ 
     &__search {
       display: flex;
       width: 5rem;

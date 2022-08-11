@@ -33,11 +33,11 @@ const Header = ({items,numberCart}) =>{
         <div className="header">
      
           <div className="header__logo">
-            <Link to='/shoppingCart'><span className='header__StartSpan'>V</span>ENIA</Link>
+            <Link to='/'><span className='header__StartSpan'>V</span>ENIA</Link>
 
           </div>
           <div className="header__Center">
-           
+            {/* <li className="header__CenterLi"><NavLink to={'/Home'}>Home</NavLink></li> */}
             <li className="header__CenterLi"><NavLink to={'/Women'}>Women</NavLink></li>
             <li className="header__CenterLi"><NavLink to={'/Men'}>Men</NavLink></li>
             <li className="header__CenterLi"><NavLink to={'/Smart Gear'}>Smart Gear</NavLink></li>
